@@ -33,8 +33,7 @@ set :log_level, :info
 namespace :deploy do
   desc 'Restart application'
   task :restart do
-    on roles(:app) do
-    #invoke 'unicorn:restart'
+    invoke 'unicorn:restart'
   end
 end
 
